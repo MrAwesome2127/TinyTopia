@@ -1,4 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from "react-dom/client";
+import Login from "./components/Login.tsx";
+
 
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 
@@ -38,6 +41,10 @@ const router = createBrowserRouter([
         path: '/AboutUs',
         element: <AboutUs />,
       },
+      {
+        path: '/login',
+        element: <Login />,
+      }      
     ],
   },
 ]);
