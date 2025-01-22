@@ -1,5 +1,3 @@
-import '../styles/ModelsList.css';
- 
 const ModelsList = () => {
     return (
         <div>
