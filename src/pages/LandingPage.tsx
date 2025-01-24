@@ -7,7 +7,6 @@ import FAQ from './FAQ';
 const LandingPage: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to TinyTopia</h1>
       <WelcomeSection />
       <Perks />
       <FAQ />
