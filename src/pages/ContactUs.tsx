@@ -1,4 +1,3 @@
-import '../styles/ContactUs.css';
 
 const ContactUs = () => {
     return (

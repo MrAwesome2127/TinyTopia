@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from "react-dom/client";
-import Login from "./components/Login.tsx";
 
 
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
@@ -12,8 +11,8 @@ import Models from "./pages/Models.tsx";
 import ModelsList from "./pages/ModelsList.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
- 
 
+ 
 
 const router = createBrowserRouter([
   {
@@ -30,7 +29,7 @@ const router = createBrowserRouter([
         element: <ModelsList />,
       },
       {
-        path: '/Models/:id',
+        path: '/Models/:modelName',
         element: <Models />,
       },
       {
@@ -41,10 +40,6 @@ const router = createBrowserRouter([
         path: '/AboutUs',
         element: <AboutUs />,
       },
-      {
-        path: '/login',
-        element: <Login />,
-      }      
     ],
   },
 ]);

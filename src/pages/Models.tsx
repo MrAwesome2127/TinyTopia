@@ -1,4 +1,3 @@
-import '../styles/Models.css';
 
 const Models = () => {
     return (

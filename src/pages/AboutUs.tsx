@@ -1,4 +1,3 @@
-import '../styles/AboutUs.css'
 
 const AboutUs = () => {
     return (

@@ -15,5 +15,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "src/config", "src/components", "client/client/components/pagesver/src/seedsver/src/serviceseclient/types",
+   "tiny-topia/src/seeds", "tsconfig.json"]
 }
