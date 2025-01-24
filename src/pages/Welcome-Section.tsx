@@ -1,4 +1,3 @@
-import '../styles/LandingPage.css';
 
 const WelcomeSection: React.FC = () => {
   return (

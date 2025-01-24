@@ -1,4 +1,4 @@
-import { LoginCredentials } from '../types/auth.types';
+import { LoginCredentials, LoginResponse } from '../types/auth.types';
 
 const BASE_URL = 'http://localhost:5173';
 
