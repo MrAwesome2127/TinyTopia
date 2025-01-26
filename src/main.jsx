@@ -11,6 +11,7 @@ import Models from "./pages/Models.tsx";
 import ModelsList from "./pages/ModelsList.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Login from "./pages/Login.tsx"
 
  
 
@@ -22,8 +23,14 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Login />,
+      },
+
+      {
+        path: '/LandingPage',
         element: <LandingPage />,
       },
+
       {
         path: '/Models',
         element: <ModelsList />,
