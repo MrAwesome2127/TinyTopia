@@ -4,7 +4,7 @@ const AboutUs = () => {
         <div>
         <h1>About Us</h1>
         <p>
-        Welcome to TinyTopia, where we believe in big dreams and small footprints!
+        Welcome to TinyTopia, where we believe in big dreams and small footprints!!
 
         At TinyTopia, we are passionate about the tiny home movement and dedicated to providing an exceptional experience for those seeking a unique and sustainable lifestyle.
         Our company specializes in the sales, manufacture, service, and maintenance of tiny homes, ensuring that our clients receive a comprehensive and tailored solution for their compact living dreams.
