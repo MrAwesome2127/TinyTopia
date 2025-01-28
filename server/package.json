@@ -8,12 +8,13 @@
     "start": "bun run build && bun ./server.ts --ignore client",
     "dev": "bun server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node dist/seeds/index.js"
+    "seed": "bun src/seeds/index.ts"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "concurrent": "^0.3.2",
     "dotenv": "^16.4.7",
     "pg": "^8.13.1",
     "sequelize": "^6.37.5"
