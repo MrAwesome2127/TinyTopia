@@ -5,4 +5,11 @@
     { "path": "./tsconfig.node.json" }
   ],
   "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "exclude": ["node_modules/bun-types"]
 }

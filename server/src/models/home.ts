@@ -50,7 +50,7 @@ export function HomeFactory(sequelize: Sequelize) {
         },
     }, {
         sequelize,
-        modelName: 'Home',
+        tableName: 'Home',
     });
     return Home;
 }

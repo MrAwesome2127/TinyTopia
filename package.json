@@ -12,12 +12,14 @@
     "install": "cd server && bun i && cd ../client && bun i",
     "client:build": "cd client && bun run build",
     "client:dev": "cd client && bun run dev",
+    "server:build": "cd server && bun run build",
     "build": "bun run client:build && bun run server:build",
     "seed": "cd server && bun run ./server/src/seeds/index.ts",
     "render-build": "bun install && bun run build"
   },
   "dependencies": {
     "bun": "^1.2.0",
+    "concurrently": "^9.1.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "node": "^18.20.6",
@@ -41,6 +43,7 @@
     "globals": "^15.14.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "wait-on": "^8.0.2"
   }
 }

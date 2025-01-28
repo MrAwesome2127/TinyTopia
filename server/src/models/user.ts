@@ -37,7 +37,7 @@ export function UserFactory(sequelize: Sequelize) {
         },
     }, {
         sequelize,
-        modelName: 'Home',
+        tableName: 'Home',
     });
     return User;
 }
