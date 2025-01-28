@@ -8,7 +8,7 @@ import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
 import Models from "./pages/Models.tsx";
-import ModelsPage from "./pages/ModelsPage.tsx";
+// import ModelsPage from "./pages/ModelsPage.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
 
@@ -25,10 +25,10 @@ const router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      {
-        path: '/Models',
-        element: <ModelsList homes={[]} />,
-      },
+    //   {
+    //     path: '/Models',
+    //     element: <ModelsPage homes={[]} />,
+    //   },
       {
         path: '/Models/:modelName',
         element: <Models />,
