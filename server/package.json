@@ -1,13 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "bun run build && bun ./server.ts --ignore client",
+    "start": "bun ./server.ts --ignore client",
     "dev": "bun server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "bun src/seeds/index.ts"
   },
   "author": "",
