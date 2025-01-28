@@ -1,14 +1,13 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Perks: React.FC = () => {
     return (
         <section id="perks" className="py-5">
-            <h2 className="text-center">Perks</h2>
-            <ul>
-                <li>Exclusive Offers</li>
-                <li>24/7 Support</li>
-                <li>Community Access</li>
-            </ul>
+            <h2>Perks</h2>
+            <p className="text-center text-body-primary">24/7 support, 365 days a year. Our team is always available to help you with any questions or concerns you may have.</p>
+            <p className="text-center text-body-primary">Exclusive discounts on all TinyTopia products. As a member, you will receive exclusive discounts on all of our products.</p>
+            <p className="text-center text-body-primary">Community Access to our exclusive community of TinyTopia members. Share your experiences and learn from others.</p>
         </section>
     );
 };

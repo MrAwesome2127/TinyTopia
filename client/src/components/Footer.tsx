@@ -1,9 +1,10 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-dark text-white text-center py-3">
-            <p>&copy; 2025 TinyTopia. All Rights Reserved.</p>
+        <footer className="py-3 my-4">
+            <p className="text-center text-body-secondary">&copy; 2025 TinyTopia. All Rights Reserved.</p>
         </footer>
     );
 };

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import WelcomeSection from './Welcome-Section';
 import Perks from './Perks';
 import FAQ from './FAQ';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutUs from './AboutUs';
+
 
 const LandingPage: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const LandingPage: React.FC = () => {
       <WelcomeSection />
       <Perks />
       <FAQ />
-      <Link to="/about" className="btn btn-primary">About Us</Link>
+      <AboutUs />
     </div>
   );
 };
