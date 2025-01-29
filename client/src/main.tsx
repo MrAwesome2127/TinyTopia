@@ -7,9 +7,10 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import App from "./App.tsx";  
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
-import Models from "./pages/Models.tsx";
+import Model from "./pages/Model.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
+import ModelsPage from "./pages/ModelsPage.tsx";
 
  
 
@@ -23,13 +24,13 @@ const router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      //   {
-    //     path: '/Models',
-    //     element: <ModelsPage homes={[]} />,
-    //   },
+        {
+        path: '/Models',
+        element: <ModelsPage />,
+      },
       {
-        path: '/Models/:modelName',
-        element: <Models />,
+        path: '/Model/:modelName',
+        element: <Model />,
       },
       {
         path: '/ContactUs',
