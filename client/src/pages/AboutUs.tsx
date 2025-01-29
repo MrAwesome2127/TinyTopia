@@ -1,7 +1,7 @@
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className="text-center text-body-primary">
         <h1>About Us</h1>
         <p>
         Welcome to TinyTopia, where we believe in big dreams and small footprints!!

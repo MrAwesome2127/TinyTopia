@@ -2,10 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
 const FAQ: React.FC = () => {
+  
     return (
         <section id="faq" className="container px-4 py-5">
-            <h2 className="pb-2 border-bottom">Frequently Asked Questions</h2>
+            <h2 className="text-center text-body-primary">Frequently Asked Questions</h2>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+             <div className="feature col">
               <div className="col d-flex align-items-start">
                 <div>       
                 <h3 className="fw-bold mb-0 fs-4 text-body-emphasis">Q: What is the average size of a tiny home built by TinyTopia?</h3>
@@ -13,7 +15,7 @@ const FAQ: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div className="feature col">
               <div className="col d-flex align-items-start">
                 <div>   
                 <h3 className="fw-bold mb-0 fs-4 text-body-emphasis">Q: Are tiny homes environmentally friendly? How so?</h3>
@@ -21,7 +23,7 @@ const FAQ: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div className="feature col">
               <div className="col d-flex align-items-start">
                 <div>  
                 <h3 className="fw-bold mb-0 fs-4 text-body-emphasis">Q: What are the benefits of living in a tiny home?</h3>
@@ -29,7 +31,7 @@ const FAQ: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div className="feature col">
               <div className="col d-flex align-items-start">
                 <div> 
                 <h3 className="fw-bold mb-0 fs-4 text-body-emphasis">Q: Can I customize the design and layout of my tiny home?</h3>
@@ -37,14 +39,16 @@ const FAQ: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div className="feature col">
               <div className="col d-flex align-items-start">
                 <div>
                 <h3 className="fw-bold mb-0 fs-4 text-body-emphasis">Q: Can I move my tiny home if I want to relocate?</h3>
                 <p>A: One of the advantages of tiny homes is their mobility. Most tiny homes are built with a trailer base, allowing for easy transportation. However, we recommend consulting with our team to ensure your home is travel-ready and to discuss any necessary preparations for a smooth transition to a new location.</p>       
                 </div>
               </div>
-            </div>        
+            </div>
+            </div>
+                    
         </section>
     );
 };
