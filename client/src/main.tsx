@@ -11,6 +11,7 @@ import Model from "./pages/Model.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
 import ModelsPage from "./pages/ModelsPage.tsx";
+import AboutUs from './pages/AboutUs.tsx';
 
  
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         path: '/Login',
         element: <Login />,
       },
+      {
+        path: '/AboutUs',
+        element: <AboutUs />,
+      },
+
     ],
   },
 ]);
