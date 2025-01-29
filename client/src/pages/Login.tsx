@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Alert } from 'react-bootstrap';
 import { LoginCredentials } from '../../../server/src/types/auth.types.ts';
 import { login } from '../../../server/src/services/authService.ts';
-import logoIcon from '../assets/TinyTopiaIcon.png';
 
 export const Login: React.FC = () => {
     const [credentials, setCredentials] = useState<LoginCredentials>({
@@ -56,7 +55,7 @@ export const Login: React.FC = () => {
                 setTimeout(() => {
                     window.location.href = '/dashboard'; // Or your chosen route
                 }, 2000);
-            } catch (error: any) {
+            } catch (error: unknown) {
                 console.error('Login failed:', error);
                 setFormMessage('Login failed. Please try again.');
             }
@@ -65,7 +64,6 @@ export const Login: React.FC = () => {
 
     return (
         <>
-            <img src={logoIcon} alt="TinyTopia Logo" className="logo-icon" />
             <Container className="mt-5 login-container">
                 <Form onSubmit={handleSubmit} noValidate>
                     <h2 className="mb-4">Login</h2>

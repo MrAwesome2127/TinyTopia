@@ -1,4 +1,4 @@
-import {DataTypes, Model, Sequelize, Optional} from 'sequelize';
+import {DataTypes, Model, Sequelize, Optional, ModelStatic} from 'sequelize';
 
 interface HomeAttributes {
     id: number;
@@ -19,7 +19,14 @@ export class Home extends Model<HomeAttributes, Optional<HomeAttributes, 'id'>> 
 
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
+
+    static associate(models: { User: ModelStatic<Model> }) {
+        Home.belongsToMany(models.User, {
+            through: 'UserHomes',
+        });
+    }
 }
+
 
 export function HomeFactory(sequelize: Sequelize) {
     Home.init({
@@ -50,7 +57,7 @@ export function HomeFactory(sequelize: Sequelize) {
         },
     }, {
         sequelize,
-        tableName: 'Home',
+        tableName: 'models',
     });
     return Home;
 }
