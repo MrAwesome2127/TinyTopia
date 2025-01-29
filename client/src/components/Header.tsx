@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logoIcon from '../assets/TinyTopiaIcon.png';
+
+import LogoImage from '../assets/images/TinyTopia-Header.png';
 const Header: React.FC = () => {
   const navigate = useNavigate();
 
@@ -39,7 +40,7 @@ const Header: React.FC = () => {
       </ul>
       <div className="col-md-3 text-end d-flex">
         <button type="button" className="btn btn-outline-primary me-2" onClick={handleLoginClick}>Login</button>
-        <img src="../assets/images/TinyTopia Header.png" alt="Logo" width={55} height={35} />
+        <img src={LogoImage} alt="Logo" width={110} height={70} />
       </div>
     </header>
   );
