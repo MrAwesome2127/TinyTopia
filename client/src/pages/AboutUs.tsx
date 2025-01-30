@@ -69,6 +69,7 @@ const AboutUs = () => {
       </div>
     </div>
 
+
     <hr class="featurette-divider"></hr>
     <div class="row featurette">
       <div class="col-md-7">

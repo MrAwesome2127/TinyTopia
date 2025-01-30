@@ -4,11 +4,17 @@ import Perks from './Perks';
 import FAQ from './FAQ';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutUs from './AboutUs';
+import BGimage from '../assets/images/TinyTopiaBG.png';
+
 
 const LandingPage: React.FC = () => {
   return (
+  <div> 
+    <div>
+      <WelcomeSection />
+    </div>
     <div style={{
-      backgroundImage: 'url(../assets/images/TinyTopia (1).png)',
+      backgroundImage: 'url(' + BGimage + ')',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -16,11 +22,13 @@ const LandingPage: React.FC = () => {
       padding: 0,
       margin: 0
     } as React.CSSProperties}>
-      <WelcomeSection />
+    </div>  
+    <div>  
       <AboutUs />
       <Perks />
       <FAQ />
     </div>
+  </div>    
   );
 };
 
