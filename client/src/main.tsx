@@ -4,14 +4,15 @@ import ReactDOM from "react-dom/client";
 
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 
-import App from "./App.tsx";  
+import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
 import Models from "./pages/Models.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
+import Weather from './pages/Weather.tsx';
 
- 
+
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: '/Login',
         element: <Login />,
       },
+      {
+        path: '/Weather',
+        element: <Weather />
+      }
     ],
   },
 ]);
