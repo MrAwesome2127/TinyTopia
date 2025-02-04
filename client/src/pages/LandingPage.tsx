@@ -1,11 +1,10 @@
 import React from 'react';
-import WelcomeSection from './Welcome-Section';
-import Perks from './Perks';
-import FAQ from './FAQ';
+import WelcomeSection from '../components/Welcome-Section';
+import Perks from '../components/Perks';
+import FAQ from '../components/FAQ';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutUs from './AboutUs';
+import AboutUs from '../components/AboutUs';
 import BGimage from '../assets/images/TinyTopiaBG.png';
-
 
 
 const LandingPage: React.FC = () => {
@@ -23,10 +22,6 @@ const LandingPage: React.FC = () => {
       padding: 0,
       margin: 0
     } as React.CSSProperties}>
-<<<<<<< HEAD
-      <WelcomeSection />
-=======
->>>>>>> 4b04fe9d2ce7a15de2ce63d30956a15b77099fa3
     </div>  
     <div>  
       <AboutUs />
