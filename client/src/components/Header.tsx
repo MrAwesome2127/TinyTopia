@@ -1,7 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import logoIcon from '../assets/TinyTopiaIcon.png';
+=======
+import LogoImage from '../assets/images/TinyTopia-Header.png';
+>>>>>>> 4b04fe9d2ce7a15de2ce63d30956a15b77099fa3
 const Header: React.FC = () => {
   const navigate = useNavigate();
 
@@ -27,6 +31,11 @@ const Header: React.FC = () => {
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link px-2 link-dark" to="/weather">
+            Weather search
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link px-2 link-dark" to="/aboutus">
             About Us
           </Link>
@@ -39,9 +48,14 @@ const Header: React.FC = () => {
       </ul>
       <div className="col-md-3 text-end d-flex">
         <button type="button" className="btn btn-outline-primary me-2" onClick={handleLoginClick}>Login</button>
-        <img src="../assets/images/TinyTopia Header.png" alt="Logo" width={55} height={35} />
+        <img src={LogoImage} alt="Logo" width={110} height={70} />
       </div>
     </header>
   );
 };
+<<<<<<< HEAD
 export default Header;
+=======
+
+export default Header;
+>>>>>>> 4b04fe9d2ce7a15de2ce63d30956a15b77099fa3

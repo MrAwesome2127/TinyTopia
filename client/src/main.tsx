@@ -4,16 +4,20 @@ import ReactDOM from "react-dom/client";
 
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 
-import App from "./App.tsx";  
+import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
 import Model from "./pages/Model.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
+<<<<<<< HEAD
 import ModelsPage from "./pages/ModelsPage.tsx";
 import AboutUs from './pages/AboutUs.tsx';
+=======
+import Weather from './pages/Weather.tsx';
 
- 
+>>>>>>> 4b04fe9d2ce7a15de2ce63d30956a15b77099fa3
+
 
 const router = createBrowserRouter([
   {
@@ -46,10 +50,16 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
+<<<<<<< HEAD
         path: '/AboutUs',
         element: <AboutUs />,
       },
 
+=======
+        path: '/Weather',
+        element: <Weather />
+      }
+>>>>>>> 4b04fe9d2ce7a15de2ce63d30956a15b77099fa3
     ],
   },
 ]);
