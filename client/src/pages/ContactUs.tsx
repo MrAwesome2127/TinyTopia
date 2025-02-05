@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../scr/Contact.css';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
 const ContactUs: React.FC= () => {
   const [name, setName] = useState <string>('');
@@ -67,18 +68,18 @@ const ContactUs: React.FC= () => {
                 <Container>
                     <Row>
                         <Col>
-                            <Form onSubmit={handleSubmit}>
+                            <Form onSubmit={handleSubmit} id="contactForm">
                                 <Form.Group controlId="formBasicName">
-                                    <Form.Label>Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Name" />
+                                    <Form.Label htmlFor="name">Name</Form.Label>
+                                    <Form.Control type="text" id="name"placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter Email" />
+                                    <Form.Label htmlFor="email">Email</Form.Label>
+                                    <Form.Control type="email" id="email"placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicMessage">
-                                    <Form.Label>Message</Form.Label>
-                                    <Form.Control as="textarea" rows={3} />
+                                    <Form.Label htmlFor="message">Message</Form.Label>
+                                    <Form.Control as="textarea" id="message" rows={3} />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
@@ -86,130 +87,6 @@ const ContactUs: React.FC= () => {
                             </Form>
                         </Col>
                     </Row>
-                </Container>
-                <text className="header">
-                    Tiny House Questionnaire
-                </text>
-                <Container>
-                    <Row>
-                        <Col>
-                            <form className="row row-cols-lg-auto g-3 align-items-center">
-                                <div className="col-12">
-                                    <label className="visually-hidden" htmlFor="inlineFormInputGroupUsername">Name</label>
-                                    <div className="input-group">
-                                        <div className="input-group-text">@</div>
-                                        <input type="text" className="form-control" id="inlineFormInputGroupUsername" placeholder="Enter your name" />
-                                    </div>
-                                </div>
-                            </form>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <form className="row row-cols-lg-auto g-3 align-items-center">
-                                <div className="col-12">
-                                    <label className="visually-hidden" htmlFor="inlineFormInputGroupEmail">Email</label>
-                                    <div className="input-group">
-                                        <div className="input-group-text">@</div>
-                                        <input type="email" className="form-control" id="inlineFormInputGroupEmail" placeholder="Enter your email" />
-                                    </div>
-                                </div>
-                            </form>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-                                <label className="form-check-label" htmlFor="flexCheckIndeterminate">
-                                    Subscribe to our newsletter
-                                </label>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <form className="row row-cols-lg-auto g-3 align-items-center">
-                                <div className="col-12">
-                                    <label className="visually-hidden" htmlFor="inlineFormInputGroupPhone">Phone</label>
-                                    <div className="input-group">
-                                        <div className="input-group-text">@</div>
-                                        <input type="text" className="form-control" id="inlineFormInputGroupPhone" placeholder="Enter your phone number" />
-                                    </div>
-                                </div>
-                            </form>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected>Number of tiny homes?</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                                <option value="3">Four</option>
-                                <option value="3">Five</option>
-                                <option value="3">Six</option>
-                            </select>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected>Which models are you interested in?</option>
-                                <option value="1">Leviathan</option>
-                                <option value="2">Icarus</option>
-                                <option value="3">Clearance</option>
-                                <option value="3">Mortedacy</option>
-                                <option value="3">Love Shack</option>
-                                <option value="3">arenthood</option>
-                            </select>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected>When do you want to purchase a tiny house?</option>
-                                <option value="1">date</option>
-                            </select>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected>How do you plan to purchase?</option>
-                                <option value="1">Bank Transfer</option>
-                                <option value="2">Credit Card</option>
-                                <option value="3">Cash</option>
-                                <option value="3">Pay Pal</option>
-                            </select>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected>Would you need it delivered?</option>
-                                <option value="1">One Month</option>
-                                <option value="2">Two Months</option>
-                                <option value="3">Three Months</option>
-                                <option value="3">Four Month</option>
-                                <option value="3">Five Month</option>
-                            </select>
-                        </Col>
-                    </Row>
-                    <div className="mb-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows={3}></textarea>
-                    </div>
-                    <Row>
-                        <Col>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container>
                 </Container>
             </div></> 
     );
