@@ -7,12 +7,12 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
-import Models from "./pages/Models.tsx";
+import ModelPage from "./pages/ModelPage.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
+import ModelsPage from "./pages/ModelsPage.tsx";
+import AboutUs from './components/AboutUs.tsx';
 import Weather from './pages/Weather.tsx';
-
-
 
 const router = createBrowserRouter([
   {
@@ -22,15 +22,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Login />,
+      },
+      {
+        path: '/LandingPage', 
         element: <LandingPage />,
       },
-      //   {
-    //     path: '/Models',
-    //     element: <ModelsPage homes={[]} />,
-    //   },
       {
-        path: '/Models/:modelName',
-        element: <Models />,
+        path: '/Models',
+        element: <ModelsPage />,
+      },
+      {
+        path: '/Model/:modelName',
+        element: <ModelPage />,
       },
       {
         path: '/ContactUs',
@@ -39,6 +43,18 @@ const router = createBrowserRouter([
       {
         path: '/Login',
         element: <Login />,
+      },
+      {
+        path: '/AboutUs',
+        element: <AboutUs />,
+      },
+      {
+        path: '/Weather',
+        element: <Weather />
+      },
+      {
+        path: '/AboutUs',
+        element: <AboutUs />,
       },
       {
         path: '/Weather',

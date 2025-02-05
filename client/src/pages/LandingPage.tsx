@@ -1,9 +1,9 @@
 import React from 'react';
-import WelcomeSection from './Welcome-Section';
-import Perks from './Perks';
-import FAQ from './FAQ';
+import WelcomeSection from '../components/Welcome-Section';
+import Perks from '../components/Perks';
+import FAQ from '../components/FAQ';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutUs from './AboutUs';
+import AboutUs from '../components/AboutUs';
 import BGimage from '../assets/images/TinyTopiaBG.png';
 
 

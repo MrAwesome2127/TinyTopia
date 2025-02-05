@@ -4,7 +4,7 @@ import { Home } from '../../models/index.ts';
 
 const router = express.Router();
 
-router.get('/homes', async (req: Request, res: Response) => {
+router.get('/Models', async (req: Request, res: Response) => {
     try {
         const homes = await Home.findAll();
         res.json(homes);
@@ -14,7 +14,7 @@ router.get('/homes', async (req: Request, res: Response) => {
     }
 });
 
-router.get('/homes/:modelName', async (req: Request, res: Response) => {
+router.get('/Model/:modelName', async (req: Request, res: Response) => {
     try {
         const home = await Home.findOne({ where: { modelName: req.params.modelName } });
         if (!home) {

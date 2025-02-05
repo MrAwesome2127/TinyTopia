@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/ContactUs.css';
 import {Button, Row, Col, Card, Form, Container} from 'react-bootstrap';
 const ContactUs: React.FC= () => {
   const [name, setName] = useState <string>('');

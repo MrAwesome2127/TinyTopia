@@ -1,4 +1,3 @@
-
 const WelcomeSection: React.FC = () => {
   
   return (

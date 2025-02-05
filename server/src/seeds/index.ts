@@ -1,8 +1,8 @@
-import { seedHomes } from './models-seeds.js' // Import the function to seed homes
-import { seedUsers } from './users-seeds.js' // Import the function to seed users
-import sequelize from '../config/connection.js';
+import { seedHomes } from './models-seeds' // Import the function to seed homes
+import { seedUsers } from './users-seeds' // Import the function to seed users
+import sequelize from '../config/connection';
 
-const seedAll = async () => {
+const seedAll = async ():Promise<void> => {
   try {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');

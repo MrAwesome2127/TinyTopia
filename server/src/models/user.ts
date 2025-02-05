@@ -1,4 +1,4 @@
-import {DataTypes, Model, Sequelize} from 'sequelize';
+import {DataTypes, Model, Sequelize, ModelStatic} from 'sequelize';
 
 interface UserAttributes {
     userName: string;
@@ -15,6 +15,12 @@ export class User extends Model<UserAttributes> implements UserAttributes {
 
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
+
+    static associate(models: { Home: ModelStatic<Model> }) {
+        User.hasMany(models.Home, {
+            foreignKey: 'modelName_id',
+        });
+    }
 }
 
 export function UserFactory(sequelize: Sequelize) {

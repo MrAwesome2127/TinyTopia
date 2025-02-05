@@ -1,5 +1,3 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Perks: React.FC = () => {
     return (
@@ -11,5 +9,4 @@ const Perks: React.FC = () => {
         </section>
     );
 };
-
 export default Perks;
