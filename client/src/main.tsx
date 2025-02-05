@@ -7,7 +7,7 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
-import Model from "./pages/Model.tsx";
+import ModelPage from "./pages/ModelPage.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Login from "./pages/Login.tsx";
 import ModelsPage from "./pages/ModelsPage.tsx";
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Model/:modelName',
-        element: <Model />,
+        element: <ModelPage />,
       },
       {
         path: '/ContactUs',

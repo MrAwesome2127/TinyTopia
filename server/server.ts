@@ -1,15 +1,20 @@
-import express from 'express';
+const forceDatabaseRefresh = false;
 
-import sequelize from './src/config/connection';
+import express from 'express';
+import router from './src/router/index.ts';
+import sequelize from './src/config/connection.ts';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(express.static('../client/dist'));
 
-sequelize.sync().then(() => {
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(router);
+
+
+sequelize.sync({force: forceDatabaseRefresh} ).then(() => {
   console.log(`Connected to database successfully.`);
   app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);

@@ -30,7 +30,7 @@ const ModelPage: React.FC = () => {
                 <h1>{home.modelName}</h1>
                 <p>{home.synopsis}</p>
                 <p>{home.price}</p>
-                <p>{home.feature}</p>
+                <p>{home.features}</p>
                 <img src={home.imageUrl} alt={home.modelName} />
             </div>
         </div>

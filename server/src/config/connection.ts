@@ -3,9 +3,6 @@ config();
 
 import { Sequelize } from 'sequelize';
 
-console.log(process.env.DB_NAME);
-console.log(process.env.DB_USER);
-
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL)
   : new Sequelize(
