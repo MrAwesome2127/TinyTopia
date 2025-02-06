@@ -24,17 +24,24 @@ const ModelPage: React.FC = () => {
         }
     };
 
-    return (
-        <div>
-            <div key={home.modelName}>
-                <h1>{home.modelName}</h1>
-                <p>{home.synopsis}</p>
-                <p>{home.price}</p>
-                <p>{home.features}</p>
-                <img src={home.imageUrl} alt={home.modelName} />
+return (
+    <div className="position-relative">
+        <div key={home.modelName} className="card mb-3 h-10" style={{ maxWidth: "75%", margin: "auto" }}>
+        <div className="row g-0">
+            <div className="col-md-2">
+                <img src={home.imageUrl} className="img-fluid rounded-start" alt={home.modelName} />
+                </div>
+                <div className="col-md-10">
+                    <div className="card-body">
+                        <h5 className="card-title">{home.modelName}</h5>
+                        <p className="card-text">{home.synopsis}</p>
+                        <p className="card-text"><strong>${home.price}</strong></p>
+                    </div>
+                </div>
             </div>
         </div>
-    );
+    </div>
+);
 }
 
 export default ModelPage;
