@@ -23,7 +23,7 @@ const ModelsList: React.FC<ModelsListProps> = ({ homes }) => {
                                 <h5 className="card-title">{home.modelName}</h5>
                                 <p className="card-text">{home.synopsis}</p>
                                 <p className="card-text"><big className="text-body-secondary">{home.price}</big></p>
-                                <a className="btn btn-primary"><Link to={`/model/${home.modelName}`}>View Details</Link></a>
+                                <a className="btn btn-primary" style={{ color: 'white' }}><Link to={`/model/${home.modelName}`} style={{ color: 'white' }}>View Details</Link></a>
                             </div>
                         </div>
                     </div>
