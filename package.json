@@ -14,7 +14,7 @@
     "client:dev": "cd client && bun run dev",
     "server:build": "cd server && bun run build",
     "build": "bun run client:build && bun run server:build",
-    "seed": "cd server && bun run ./server/src/seeds/index.ts",
+    "seed": "cd server && bun run /src/seeds/index.ts",
     "render-build": "bun install && bun run build"
   },
   "dependencies": {
