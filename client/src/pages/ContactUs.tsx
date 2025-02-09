@@ -31,24 +31,24 @@ const ContactUs: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Wandering Tiny Homes</h1>
+                                                        <h1 className="title">Tiny Topia</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">HEADQUATERS</p>
-                                                        <p className="body">Kansas City</p>
-                                                        <p className="body">913-999-1234</p>
+                                                        <p className="body">Full Tiny Home Service</p>
+                                                        <p className="body">Call Us To Learn More</p>
+                                                        <p className="body">786-763-1234</p>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Col>
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Wandering Tiny Homes</h1>
+                                                        <h1 className="title">Tiny Homes</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">BUILD LOCATION</p>
-                                                        <p className="body">Atlanta</p>
-                                                        <p className="body">913-999-1234</p>
+                                                        <p className="body">We Build On Location</p>
+                                                        <p className="body">Call Us TO Learn More</p>
+                                                        <p className="body">786-763-1234</p>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Col>
