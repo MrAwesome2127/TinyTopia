@@ -70,15 +70,15 @@ const ContactUs: React.FC= () => {
                             <Form onSubmit={handleSubmit} id="contactForm">
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label htmlFor="name">Name</Form.Label>
-                                    <Form.Control type="text" id="name"placeholder="Enter Name" />
+                                    <Form.Control onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label htmlFor="email">Email</Form.Label>
-                                    <Form.Control type="email" id="email"placeholder="Enter Email" />
+                                    <Form.Control onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicMessage">
                                     <Form.Label htmlFor="message">Message</Form.Label>
-                                    <Form.Control as="textarea" id="message" rows={3} />
+                                    <Form.Control onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
