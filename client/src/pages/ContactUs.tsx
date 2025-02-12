@@ -9,12 +9,26 @@ const ContactUs: React.FC= () => {
     
     // Handle form submission, e.g., send data to a server
     console.log({ name, email, message });
+
+    const formData = {
+        name,
+        email,
+        message,
+    }
+        const contacts = readLocalStorage ();
+        contacts.push ((formData));
+        localStorage.setItem("contactForm", JSON.stringify(contacts));
+    
     // Clear the form after submission
     setName('');
     setEmail('');
     setMessage('');
     };
-  
+    
+    const readLocalStorage = () => {
+        const data = localStorage.getItem("contactForm");
+        return data ? JSON.parse(data) : [];
+      };
     return (
       <><header style={{ paddingLeft: 0 }}>
             <div
@@ -70,15 +84,15 @@ const ContactUs: React.FC= () => {
                             <Form onSubmit={handleSubmit} id="contactForm">
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label htmlFor="name">Name</Form.Label>
-                                    <Form.Control onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
+                                    <Form.Control value= {name} onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label htmlFor="email">Email</Form.Label>
-                                    <Form.Control onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
+                                    <Form.Control value= {email} onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicMessage">
                                     <Form.Label htmlFor="message">Message</Form.Label>
-                                    <Form.Control onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
+                                    <Form.Control value= {message} onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
@@ -92,7 +106,7 @@ const ContactUs: React.FC= () => {
 };
 export default ContactUs;
 
-
+// line 19-22
 
 
 

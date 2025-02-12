@@ -19,9 +19,9 @@ function handleClick(event) {
     }
 
     const formData = {
-        username: usernameInput.value,
-        title: titleInput.value,
-        content: contentInput.value
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
     }
     storeLocalStorage(
         formData
