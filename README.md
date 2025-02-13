@@ -1,6 +1,6 @@
 # TinyTopia
   
-![alt text](image-1.png)
+![alt text](client\src\assets\images\screenshot.png)
 
 
 ## Description
