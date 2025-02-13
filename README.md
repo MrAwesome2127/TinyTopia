@@ -25,7 +25,7 @@ bun run start:dev
 ## Usage
 This page is for users looking to purchase a tiny home.
 
-
+Technologies used: typscript, react, vite, node, express, postgres and bun
 
 ## Contributing
 Team effort of Tim Velasquez, Ryan Bednar, Kassandra Peasly, Matt Unrein, Nathan Ebbesen, and Levi Frandsen
