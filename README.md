@@ -1,6 +1,6 @@
 # TinyTopia
   
-
+![alt text](client\src\assets\images\screenshot.png)
 
 
 ## Description
@@ -15,18 +15,23 @@ TinyTopia is a website for the sale, manufacture and service of tiny home offeri
 - [Questions](#questions)
 
 ## Installation
-N/A This is a deployed webpage.
+We used bun node handler.
+The steps to run locally are as follows:
+bun install >
+bun run build >
+bun run start:dev
+
 
 ## Usage
 This page is for users looking to purchase a tiny home.
 
-
+Technologies used: typscript, react, vite, node, express, postgres and bun
 
 ## Contributing
 Team effort of Tim Velasquez, Ryan Bednar, Kassandra Peasly, Matt Unrein, Nathan Ebbesen, and Levi Frandsen
 
 ## Tests
-Go to (url) and explore the site!
+Go to ([url](https://tinytopia.onrender.com)) and explore the site! Or run locally and test with insomnia.
 
 ## Questions
 If you have any questions, please reach out to anyone on our team: 
