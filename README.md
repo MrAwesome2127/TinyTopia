@@ -1,6 +1,6 @@
 # TinyTopia
   
-
+![alt text](image-1.png)
 
 
 ## Description
@@ -17,8 +17,8 @@ TinyTopia is a website for the sale, manufacture and service of tiny home offeri
 ## Installation
 We used bun node handler.
 The steps to run locally are as follows:
-bun install
-bun run build
+bun install >
+bun run build >
 bun run start:dev
 
 
