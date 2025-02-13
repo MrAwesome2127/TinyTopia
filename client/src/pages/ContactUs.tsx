@@ -9,12 +9,26 @@ const ContactUs: React.FC= () => {
     
     // Handle form submission, e.g., send data to a server
     console.log({ name, email, message });
+
+    const formData = {
+        name,
+        email,
+        message,
+    }
+        const contacts = readLocalStorage ();
+        contacts.push ((formData));
+        localStorage.setItem("contactForm", JSON.stringify(contacts));
+    
     // Clear the form after submission
     setName('');
     setEmail('');
     setMessage('');
     };
-  
+    
+    const readLocalStorage = () => {
+        const data = localStorage.getItem("contactForm");
+        return data ? JSON.parse(data) : [];
+      };
     return (
       <><header style={{ paddingLeft: 0 }}>
             <div
@@ -31,24 +45,24 @@ const ContactUs: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Wandering Tiny Homes</h1>
+                                                        <h1 className="title">Tiny Topia</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">HEADQUATERS</p>
-                                                        <p className="body">Kansas City</p>
-                                                        <p className="body">913-999-1234</p>
+                                                        <p className="body">Full Tiny Home Service</p>
+                                                        <p className="body">Call Us To Learn More</p>
+                                                        <p className="body">786-763-1234</p>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Col>
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Wandering Tiny Homes</h1>
+                                                        <h1 className="title">Tiny Homes</h1>
                                                     </Card.Title>
                                                     <Card.Text>
-                                                        <p className="body">BUILD LOCATION</p>
-                                                        <p className="body">Atlanta</p>
-                                                        <p className="body">913-999-1234</p>
+                                                        <p className="body">We Build On Location</p>
+                                                        <p className="body">Call Us TO Learn More</p>
+                                                        <p className="body">786-763-1234</p>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Col>
@@ -70,15 +84,15 @@ const ContactUs: React.FC= () => {
                             <Form onSubmit={handleSubmit} id="contactForm">
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label htmlFor="name">Name</Form.Label>
-                                    <Form.Control type="text" id="name"placeholder="Enter Name" />
+                                    <Form.Control value= {name} onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label htmlFor="email">Email</Form.Label>
-                                    <Form.Control type="email" id="email"placeholder="Enter Email" />
+                                    <Form.Control value= {email} onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicMessage">
                                     <Form.Label htmlFor="message">Message</Form.Label>
-                                    <Form.Control as="textarea" id="message" rows={3} />
+                                    <Form.Control value= {message} onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
@@ -92,7 +106,7 @@ const ContactUs: React.FC= () => {
 };
 export default ContactUs;
 
-
+// line 19-22
 
 
 
