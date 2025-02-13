@@ -4,7 +4,9 @@ const ContactUs: React.FC= () => {
   const [name, setName] = useState <string>('');
   const [email, setEmail] = useState <string>('');
   const [message, setMessage] = useState <string>('');
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
+  const [messageSent, setMessageSent] = useState <boolean>(false);
+
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Handle form submission, e.g., send data to a server
@@ -23,7 +25,25 @@ const ContactUs: React.FC= () => {
     setName('');
     setEmail('');
     setMessage('');
-    };
+    
+    // Show success message
+    setMessageSent(true);
+    setTimeout(() => setMessageSent(false), 3000);
+  };
+
+  const showMessage = () => {
+    if (messageSent) {
+      return (
+        <div className="alert alert-success mt-3" role="alert">
+          <button type="button" className="close" onClick={() => setMessageSent(false)}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      );
+    }
+    return null;
+  };
     
     const readLocalStorage = () => {
         const data = localStorage.getItem("contactForm");
@@ -33,7 +53,7 @@ const ContactUs: React.FC= () => {
       <><header style={{ paddingLeft: 0 }}>
             <div
                 className='p-5 text-center bg-image'
-                style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')", height: 400 }}
+                style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/001.webp')", height: 400 }}
             >
                 <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
                     <div className='d-flex justify-content-center align-items-center h-100'>
@@ -45,7 +65,7 @@ const ContactUs: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Tiny Topia</h1>
+                                                        <h1 className="title">TinyTopia</h1>
                                                     </Card.Title>
                                                     <Card.Text>
                                                         <p className="body">Full Tiny Home Service</p>
@@ -57,11 +77,11 @@ const ContactUs: React.FC= () => {
                                             <Col>
                                                 <Card.Body>
                                                     <Card.Title>
-                                                        <h1 className="title">Tiny Homes</h1>
+                                                        <h1 className="title">TinyTopia</h1>
                                                     </Card.Title>
                                                     <Card.Text>
                                                         <p className="body">We Build On Location</p>
-                                                        <p className="body">Call Us TO Learn More</p>
+                                                        <p className="body">Call Us To Learn More</p>
                                                         <p className="body">786-763-1234</p>
                                                     </Card.Text>
                                                 </Card.Body>
@@ -84,16 +104,17 @@ const ContactUs: React.FC= () => {
                             <Form onSubmit={handleSubmit} id="contactForm">
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label htmlFor="name">Name</Form.Label>
-                                    <Form.Control value= {name} onChange= {(event)=>setName(event.target.value)} type="text" id="name"placeholder="Enter Name" />
+                                    <Form.Control value={name} onChange={(event) => setName(event.target.value)} type="text" id="name" placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label htmlFor="email">Email</Form.Label>
-                                    <Form.Control value= {email} onChange= {(event)=>setEmail(event.target.value)} type="email" id="email"placeholder="Enter Email" />
+                                    <Form.Control value={email} onChange={(event) => setEmail(event.target.value)} type="email" id="email" placeholder="Enter Email" />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicMessage">
                                     <Form.Label htmlFor="message">Message</Form.Label>
-                                    <Form.Control value= {message} onChange= {(event)=>setMessage(event.target.value)} as="textarea" id="message" rows={3} />
+                                    <Form.Control value={message} onChange={(event) => setMessage(event.target.value)} as="textarea" id="message" rows={3} />
                                 </Form.Group>
+                                {showMessage()} 
                                 <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
