@@ -34,7 +34,7 @@ export const seedUsers = async () => {
         },
         {
             userName: 'RyanB',
-            password: ' ',
+            password: 'RollBack!234',
             email: 'RyanB@fake.com',
             modelName_id: 6,
         },
