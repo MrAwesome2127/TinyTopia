@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState, FC } from 'react';
 import { Form, Button, Container, Alert } from 'react-bootstrap';
-import { LoginCredentials } from '../../../server/src/types/auth.types.ts';
-import { login } from '../../../server/src/services/authService.ts';
+import authService from "../middleware/authService";
+import { LoginCredentials } from '../../../server/src/types/auth.types';
 
-export const Login: React.FC = () => {
+
+
+export const Login: FC = () => {
     const [credentials, setCredentials] = useState<LoginCredentials>({
         email: '',
         password: '',
@@ -16,7 +19,7 @@ export const Login: React.FC = () => {
 
     const [formMessage, setFormMessage] = useState<string | null>(null);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         let isValid = true;
@@ -37,28 +40,24 @@ export const Login: React.FC = () => {
             newErrors.password = 'Password must be at least 8 characters long';
             isValid = false;
         } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/.test(credentials.password)) {
-            newErrors.password =
-                'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
+            newErrors.password = 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
             isValid = false;
         }
 
         setErrors(newErrors);
 
         if (isValid) {
-            try {
-                const response = await login(credentials);
-                console.log('Login successful:', response);
-
-                localStorage.setItem('token', response.token);
-
-                setFormMessage('Login successful! Redirecting...');
-                setTimeout(() => {
-                    window.location.href = '/dashboard'; // Or your chosen route
-                }, 2000);
-            } catch (error: unknown) {
-                console.error('Login failed:', error);
-                setFormMessage('Login failed. Please try again.');
-            }
+            authService.loginUser(credentials)
+                .then(() => {
+                    setFormMessage('Login successful! Redirecting...');
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 2000);
+                })
+                .catch((error) => {
+                    console.error('Login failed:', error);
+                    setFormMessage('Login failed. Please try again.');
+                });
         }
     };
 

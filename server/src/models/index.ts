@@ -2,6 +2,7 @@ import sequelize from '../config/connection';
 import { HomeFactory } from './home';
 import { UserFactory } from './user';
 
+
 const Home = HomeFactory(sequelize);
 const User = UserFactory(sequelize);
 

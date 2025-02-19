@@ -1,25 +1,29 @@
-import { LoginCredentials, LoginResponse } from '../types/auth.types';
+import { Request, Response, NextFunction } from 'express';
+import jwt from 'jsonwebtoken';
 
-const BASE_URL = 'http://localhost:5173';
-
-export const login = async (credentials: LoginCredentials): Promise<LoginResponse> => {
-    try {
-        const response = await fetch(`${BASE_URL}/auth/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(credentials),
-        });
-
-if (!response.ok) {
-    throw new Error('Failed to log in. Please check your credentials.');
+interface JwtPayload {
+    username: string;
 }
 
-const data: LoginResponse = await response.json();
-return data;
-    } catch (error) {
-        console.error('Error during login:', error);
-        throw error;
+export const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
+    const authHeader = req.headers.authorization;
+    
+    if (authHeader) {
+        const token = authHeader && authHeader.split(' ')[1];
+        if (token) {
+            jwt.verify(token, process.env.JWT_SECRET as string, (err, decoded) => {
+                if (err) {
+                    return res.sendStatus(403).json({ message: 'Invalid token' });
+                }
+                req.user = decoded as JwtPayload;
+                return next();
+            });
+        } else {
+            res.sendStatus(401).json({ message: 'Token not provided' });
+        }
+    } else {
+        res.sendStatus(401).json({ message: 'Authorization header not provided' });
     }
+      
+    
 };
