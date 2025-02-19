@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# TinyTopia
+  
+![alt text](client\src\assets\images\screenshot.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Description
+TinyTopia is a website for the sale, manufacture and service of tiny home offering a range of models and services. Including delivery and maintenance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-## Expanding the ESLint configuration
+## Installation
+We used bun node handler.
+The steps to run locally are as follows:
+bun install >
+bun run build >
+bun run start:dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
+This page is for users looking to purchase a tiny home.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Technologies used: typscript, react, vite, node, express, postgres and bun
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contributing
+Team effort of Tim Velasquez, Ryan Bednar, Kassandra Peasly, Matt Unrein, Nathan Ebbesen, and Levi Frandsen
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Tests
+Go to ([url](https://tinytopia.onrender.com)) and explore the site! Or run locally and test with insomnia.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Questions
+If you have any questions, please reach out to anyone on our team: 
+Nathan Ebbesen [Nathan.R.Ebbesen@hotmail.com](mailto:Nathan.R.Ebbesen@hotmail.com), 
+Levi Frandsen [l3viop@gmail.com](mailto:l3viop@gmail.com), 
+Kassandra Peasly [inspiredby.you@outlook.com](mailto:inspiredby.you@outlook.com), 
+Matt Unrein [reisender1820@gmail.com](reisender1820@gmail.com), 
+Ryan Bednar [Rbednar01@gmail.com](mailto:Rbednar01@gmail.com),
+Tim Velasquez [tim@wanderingtinyhomes.com](mailto:tim@wanderingtinyhomes.com)
+You can find our GitHub repo at: https://github.com/MrAwesome2127/TinyTopia
