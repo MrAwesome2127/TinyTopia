@@ -1,9 +1,7 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from "react-dom/client";
-
-
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-
 import App from "./App.tsx";
 import ErrorPage from "./pages/Error.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
@@ -59,7 +57,9 @@ const router = createBrowserRouter([
 const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
-    <RouterProvider router={router} />
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   );
 } else {
   console.error("Root element not found");

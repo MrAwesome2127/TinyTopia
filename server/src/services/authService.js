@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.login = void 0;
-var BASE_URL = 'http://localhost:5173';
+var BASE_URL = 'http://localhost:3001';
 var login = function (credentials) { return __awaiter(void 0, void 0, void 0, function () {
     var response, data, error_1;
     return __generator(this, function (_a) {
