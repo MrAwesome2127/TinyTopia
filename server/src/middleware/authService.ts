@@ -1,5 +1,5 @@
 import { JwtPayload, jwtDecode } from "jwt-decode";
-import { LoginCredentials } from "../types/auth.types.ts";
+import { LoginCredentials } from "../types/auth_types";
 
 const BASE_URL = 'http://localhost:3001';
 
