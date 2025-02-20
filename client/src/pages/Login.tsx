@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, FC } from 'react';
 import { Form, Button, Container, Alert } from 'react-bootstrap';
-import authService from "../middleware/authService";
-import { LoginCredentials } from '../../../server/src/types/auth.types';
+import authService from "../../../server/src/middleware/authService";
+import { LoginCredentials } from '../../../server/src/types/auth_types';
 
 
 
